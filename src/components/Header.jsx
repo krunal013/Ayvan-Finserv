@@ -51,7 +51,7 @@ const Header = () => {
                     <Link to="/Lifeinsurance" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <FaHandHoldingHeart className="text-xl text-rose-500" /> Life Insurance
                     </Link>
-                    <Link to="/hiring" className="flex text-gray-900 gap-2 hover:text-orange-600">
+                    <Link to="/Healthinsurance" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <FaHandHoldingMedical className="text-xl text-teal-500" /> Health Insurance
                     </Link>
                   </ul>

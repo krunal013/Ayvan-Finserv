@@ -7,7 +7,8 @@ import React from "react";
 import { About } from "./components/About";
 import GeneralInsurance from "./components/GeneralInsurance";
 import Contact from "./components/Contact"; // No curly braces
-
+import Lifeinsurance from "./components/Lifeinsurance";
+import Healthinsurance from "./components/Healthinsurance"
 import { SignIn } from "./components/SignIn";
 import Footer from "./components/Footer";
 
@@ -38,6 +39,8 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/GeneralInsurance" element={<GeneralInsurance />} />
+              <Route path="/Lifeinsurance" element={<Lifeinsurance />} />
+              <Route path="/Healthinsurance" element={<Healthinsurance />} />
               <Route path="/services" element={<PricingBox />} />
               <Route path="/contact" element={<Contact />} />{" "}
               {/* Fix Contact Route */}
