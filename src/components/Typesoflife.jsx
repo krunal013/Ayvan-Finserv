@@ -128,7 +128,7 @@ const SliderCard = () => {
                     overflow-hidden transition-all duration-500 mx-auto 
                     hover:border-orange-600 hover:shadow-sm"
                   >
-                    <div className="flex items-center gap-5 border-b border-gray-200 pb-5">
+                    <div className="flex items-center gap-5 border-b border-gray-200 mb-3">
                       {iconMap[testimonial.id]}
                       <div>
                         <h5 className="text-gray-900 text-xl font-medium transition-all duration-500 mb-1">
