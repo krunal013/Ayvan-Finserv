@@ -1,0 +1,71 @@
+const financialServices = [
+    {
+      title: "Mutual Fund",
+      description:
+        "Professionally managed funds by asset management companies and fund houses that pool investments from several individuals with the same investment objective.",
+      bgColor: "bg-blue-100",
+      icon: "/icons/mutual-fund.svg",
+    },
+    {
+      title: "General Insurance",
+      description:
+        "Secure yourself financially from any type of unforeseeable events regarding motor vehicle, houses, health, and travel.",
+      bgColor: "bg-red-100",
+      icon: "/icons/general-insurance.svg",
+    },
+    {
+      title: "Life Insurance",
+      description:
+        "Range of life insurance solutions for your family’s financial security and keeping you financially prepared for life's uncertainties.",
+      bgColor: "bg-yellow-100",
+      icon: "/icons/life-insurance.svg",
+    },
+    {
+      title: "Fixed Deposits",
+      description:
+        "Earn greater return than a regular saving account by investing in an investment scheme provided by post offices, banks, and financial companies.",
+      bgColor: "bg-green-100",
+      icon: "/icons/fixed-deposit.svg",
+    },
+    {
+      title: "Health Insurance",
+      description:
+        "Medical emergencies are unpredictable and expensive, hence having health insurance is not a luxury but a necessity.",
+      bgColor: "bg-teal-100",
+      icon: "/icons/health-insurance.svg",
+    },
+  ];
+  
+  const FinancialCards = () => {
+    return (
+      <section className="py-10 ">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800">
+            A structured and disciplined advisory approach to meet your desired <br />
+            <span className="text-gray-700">financial goals and milestones</span>
+          </h2>
+        </div>
+  
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mt-10">
+          {financialServices.map((service, index) => (
+            <div
+              key={index}
+              className={`p-6 rounded-xl shadow-md flex justify-between items-center ${service.bgColor}`}
+            >
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
+                <p className="text-gray-700 mt-2 text-sm">{service.description}</p>
+                <a href="#" className="mt-3 inline-block text-blue-600 font-semibold hover:underline">
+                  Learn More →
+                </a>
+              </div>
+              <img src={service.icon} alt={service.title} className="w-16 h-16" />
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  };
+  
+  export default FinancialCards;
+  
