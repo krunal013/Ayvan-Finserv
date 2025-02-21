@@ -39,7 +39,7 @@ const Header = () => {
               <span>Services</span> &nbsp; <FaChevronDown size={12} />
             </button>
             <div
-              className={`absolute left-0 top-full border-t-2 border-[#ff6b00] mt-7 w-[600px] bg-white shadow-lg rounded-b-lg overflow-hidden transition-all duration-700 ease-in-out ${openDropdown === "Services" ? "max-h-[500px] opacity-100" : "max-h-0 border-[#ff6a0000]"}`}
+              className={`absolute left-0 top-full border-t-2 border-[#ff6b00] mt-7 w-[600px] bg-white shadow-lg rounded-b-lg overflow-hidden transition-all duration-700 ease-in-out ${openDropdown === "Services" ? "max-h-[500px] " : "max-h-0 border-t-[#ff6a0000]"}`}
             >
               <div className="flex p-4">
                 <div className="w-1/2 border-r pr-4">

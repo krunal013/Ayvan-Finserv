@@ -51,46 +51,42 @@ const SliderCard = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Term Plan",
+      name: "Individual Health Insurance",
       role: "CEO",
       review: [
-        "Provides coverage for a specific period (e.g., 10, 20, or 30 years).",
-        "Pays a death benefit to beneficiaries if the insured passes away during the term.",
-        "Lower premiums compared to permanent life insurance.",
-        "No cash value—only provides protection.",
+        "Covers a single person for medical expenses.",
+        "Ideal for individuals who want separate coverage.",
+       
       ],
     },
     {
       id: 2,
-      name: "Endowment Policy",
+      name: "Family Floater Health Insurance",
       role: "Product Designer",
       review: [
-        "Provides both insurance coverage and savings benefits.",
-        "Pays out a lump sum either on policy maturity or in case of the policyholder’s death.",
-        "Helps in wealth accumulation for future financial goals.",
-        "Suitable for long-term financial planning and disciplined savings.",
+        "Covers the entire family under a single policy.",
+        "The sum insured is shared among all members.",
+        
       ],
     },
     {
       id: 3,
-      name: "Child Insurance Plan",
+      name: " Group Health Insurance",
       role: "Developer",
       review: [
-        "A combination of investment and insurance to secure a child’s future.",
-        "Provides financial support for education, marriage, and other milestones.",
-        "Offers flexible payout options at key stages of a child's life.",
-        "Provides tax benefits under applicable laws.",
+        "Offered by employers to employees as a workplace benefit.",
+        "Covers hospitalization, medical expenses, and sometimes maternity benefits.",
+        
       ],
     },
     {
       id: 4,
-      name: "Unit Linked Insurance Plans",
+      name: "Senior Citizen Health Insurance",
       role: "Developer",
       review: [
-        "Dual benefits of life insurance coverage and investment.",
-        "Market-linked returns with the flexibility to invest in equity, debt, or balanced funds.",
-        "Lock-in period of 5 years, promoting long-term savings.",
-        "Partial withdrawal option after the lock-in period for financial needs.",
+        "Specially designed for individuals above 60 years of age.",
+        "Covers age-related illnesses, hospitalization, and medical treatments.",
+        
       ],
     },
   ];
@@ -102,7 +98,7 @@ const SliderCard = () => {
           <div className="inline-block bg-[#ff6b00] text-white text-xs font-bold px-2 py-1 rounded-md mb-4">
             CUSTOMIZED INVESTMENT OPTIONS
           </div>
-          <h2 className="text-4xl font-bold text-gray-900">Types of Life Insurance</h2>
+          <h2 className="text-4xl font-bold text-gray-900">Types of Health Insurance</h2>
         </div>
         <div className="relative">
           <div
@@ -128,7 +124,7 @@ const SliderCard = () => {
                     overflow-hidden transition-all duration-500 mx-auto 
                     hover:border-orange-600 hover:shadow-sm"
                   >
-                    <div className="flex items-center gap-5 border-b border-gray-200 pb-5">
+                    <div className="flex items-center gap-5 border-b border-gray-200 mb-3">
                       {iconMap[testimonial.id]}
                       <div>
                         <h5 className="text-gray-900 text-xl font-medium transition-all duration-500 mb-1">

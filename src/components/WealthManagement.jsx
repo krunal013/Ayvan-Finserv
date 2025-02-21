@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaUserTie, FaChartPie, FaHandshake, FaBalanceScale } from "react-icons/fa";
 
+
 const WealthManagement = () => {
   useEffect(() => {
     AOS.init({
@@ -41,7 +42,7 @@ const WealthManagement = () => {
         {/* Card 1 */}
         <div className="p-6 border rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" data-aos="fade-up">
           <FaUserTie className="text-4xl text-[#ff6b00] mb-4" />
-          <h3 className="text-xl font-bold">Diversified Products</h3>
+          <h3 className="text-xl font-bold text-black">Diversified Products</h3>
           <p className="text-gray-600 mt-2 text-sm md:text-base">
             A wide range of products are available to meet your suitability, risk appetite, protection needs, and financial goals. Our basket includes various products to keep you financially secure.
           </p>
@@ -50,7 +51,7 @@ const WealthManagement = () => {
         {/* Card 2 */}
         <div className="p-6 border rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
           <FaChartPie className="text-4xl text-[#ff6b00] mb-4" />
-          <h3 className="text-xl font-bold">Holistic and Process-Centric Analysis</h3>
+          <h3 className="text-xl font-bold text-black">Holistic and Process-Centric Analysis</h3>
           <p className="text-gray-600 mt-2 text-sm md:text-base">
             Our financial advisors research products thoroughly before suggesting them to clients based on their banking, investment, and financial goals.
           </p>
@@ -59,7 +60,7 @@ const WealthManagement = () => {
         {/* Card 3 */}
         <div className="p-6 border rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="400">
           <FaHandshake className="text-4xl text-[#ff6b00] mb-4" />
-          <h3 className="text-xl font-bold">Transparent & Trustworthy</h3>
+          <h3 className="text-xl font-bold text-black">Transparent & Trustworthy</h3>
           <p className="text-gray-600 mt-2 text-sm md:text-base">
             We ensure unbiased recommendations that align with the client’s financial needs, irrespective of any commission or fees.
           </p>
@@ -68,7 +69,7 @@ const WealthManagement = () => {
         {/* Card 4 */}
         <div className="p-6 border rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="600">
           <FaBalanceScale className="text-4xl text-[#ff6b00] mb-4" />
-          <h3 className="text-xl font-bold">Review, Re-evaluate and Rebalancing</h3>
+          <h3 className="text-xl font-bold text-black">Review, Re-evaluate and Rebalancing</h3>
           <p className="text-gray-600 mt-2 text-sm md:text-base">
             Regular reviews are performed to ensure clients' capital is protected, and returns are maximized by rebalancing portfolios.
           </p>
