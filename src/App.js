@@ -8,12 +8,15 @@ import { About } from "./components/About";
 import GeneralInsurance from "./components/GeneralInsurance";
 import Contact from "./components/Contact"; // No curly braces
 import Lifeinsurance from "./components/Lifeinsurance";
-import Healthinsurance from "./components/Healthinsurance"
+import Healthinsurance from "./components/Healthinsurance";
+import MutualFund from "./components/investment/MutualFunds/MutualFunds";
+import Fixed from "./components/investment/FD/Fixed";
 import { SignIn } from "./components/SignIn";
 import Footer from "./components/Footer";
 
 import SignUp from "./components/SignUp";
 import PricingBox from "./components/PricingBox";
+import Services from "./components/Services";
 import VerifyOTP from "./components/VerifyOTP";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -41,7 +44,9 @@ function App() {
               <Route path="/GeneralInsurance" element={<GeneralInsurance />} />
               <Route path="/Lifeinsurance" element={<Lifeinsurance />} />
               <Route path="/Healthinsurance" element={<Healthinsurance />} />
-              <Route path="/services" element={<PricingBox />} />
+              <Route path="/MutualFund" element={<MutualFund />} />
+              <Route path="/Fixed" element={<Fixed />} />
+              <Route path="/Services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />{" "}
               {/* Fix Contact Route */}
               <Route path="/signin" element={<SignIn />} />
