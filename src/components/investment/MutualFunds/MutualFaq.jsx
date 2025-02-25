@@ -56,62 +56,73 @@ export default function MutualFaq() {
       <h2 className="text-4xl text-[#ff6b00] font-bold mb-6 text-center">
         Frequently Asked Questions
       </h2>
+
+      {/* Mobile Tabs (Horizontal) */}
+      <div className="flex md:hidden w-full overflow-x-auto space-x-4 p-2">
+        {Object.keys(faqData).map((tab) => (
+          <button
+            key={tab}
+            className={`flex items-center whitespace-nowrap px-4 py-2 rounded-lg transition ${
+              activeTab === tab
+                ? "bg-orange-100 text-orange-600 font-semibold"
+                : "text-gray-600"
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tabIcons[tab]} {tab}
+          </button>
+        ))}
+      </div>
+
       <div className="max-w-5xl w-full lg:h-[450px] p-6 text-black bg-white rounded-lg shadow-sm flex flex-col md:flex-row">
-        {/* Sidebar Tabs */}
-        <div className="md:w-1/4 pr-4 mb-4 md:mb-0">
+        {/* Desktop Sidebar Tabs */}
+        <div className="hidden md:flex md:w-1/4 pr-4 mb-4 md:mb-0 flex-col space-y-3">
           <h2 className="text-lg font-semibold mb-4 text-center md:text-left">
             HOW TO GET STARTED
           </h2>
-          <div className="flex flex-col space-y-3">
-            {Object.keys(faqData).map((tab) => (
-              <button
-                key={tab}
-                className={`flex items-center py-2 px-4 rounded-lg transition ${
-                  activeTab === tab
-                    ? "bg-orange-100 text-orange-600 font-semibold"
-                    : "text-gray-600"
-                }`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tabIcons[tab]} {tab}
-              </button>
-            ))}
-          </div>
+          {Object.keys(faqData).map((tab) => (
+            <button
+              key={tab}
+              className={`flex items-center py-2 px-4 rounded-lg transition ${
+                activeTab === tab
+                  ? "bg-orange-100 text-orange-600 font-semibold"
+                  : "text-gray-600"
+              }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tabIcons[tab]} {tab}
+            </button>
+          ))}
         </div>
 
-        {/* FAQ Section with hidden scrollbar */}
+        {/* FAQ Section */}
         <div className="md:w-3/4 pl-0 md:pl-6 overflow-auto hide-scrollbar">
-          <div>
-            {faqData[activeTab].map((item, index) => (
-              <div key={index} className="border-b py-6 last:mb-0">
-                <button
-                  className={`w-full text-left font-semibold flex justify-between items-center transition-colors ${
-                    openIndex === index ? "text-orange-600" : "text-black"
-                  }`}
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
-                >
-                  {item.question}
-                  <span>
-                    {openIndex === index ? (
-                      <FaChevronUp className="ml-2" />
-                    ) : (
-                      <FaChevronDown className="ml-2" />
-                    )}
-                  </span>
-                </button>
-                {/* Smooth transition container */}
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    openIndex === index ? "max-h-40 mt-2" : "max-h-0"
-                  }`}
-                >
-                  <p className="text-gray-600">{item.answer}</p>
-                </div>
+          {faqData[activeTab].map((item, index) => (
+            <div key={index} className="border-b py-6 last:mb-0">
+              <button
+                className={`w-full text-left font-semibold flex justify-between items-center transition-colors ${
+                  openIndex === index ? "text-orange-600" : "text-black"
+                }`}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                {item.question}
+                <span>
+                  {openIndex === index ? (
+                    <FaChevronUp className="ml-2" />
+                  ) : (
+                    <FaChevronDown className="ml-2" />
+                  )}
+                </span>
+              </button>
+              <div
+                className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                  openIndex === index ? "max-h-40 mt-2" : "max-h-0"
+                }`}
+              >
+                <p className="text-gray-600">{item.answer}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -5,8 +5,8 @@ const GeneralBanner = () => {
   return (
     <div className="flex flex-row items-center justify-between mt-20 lg:mt-20 gap-6 min-h-[164px] py-8 px-8 md:px-16 bg-gradient-to-b from-[#14b82a25] to-white font-sans overflow-hidden">
       <div className=" text-left">
-        <h1 className="text-xl lg:text-4xl font-bold text-green-800">Mutual Funds</h1>
-        <p className="text-xs lg:text-xl text-green-800 mt-4">
+        <h1 className="text-2xl lg:text-4xl font-bold text-green-800">Mutual Funds</h1>
+        <p className="text-md lg:text-xl text-green-800 mt-4">
           "Your health is your wealth. Protect it with the right insurance."
         </p>
         <button

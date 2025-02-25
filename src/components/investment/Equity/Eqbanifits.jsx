@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 const MutualBenifits = () => {
   const cards = [
     {
-      title: "Start Small",
+      title: "High Return Potential",
       image: startsmall,
       description:
         "💡 You don’t need a lot of money; you can start investing with just a small amount. With Systematic Investment Plans (SIPs), you can start investing in mutual funds with as little as ₹500 per month. This makes it accessible for everyone, even beginners.",
@@ -19,26 +19,26 @@ const MutualBenifits = () => {
       readTime: "7 Mins Read",
     },
     {
-      title: "Tax Benefits",
+      title: " Tax Benefits",
       image: tax,
       description:
-        "💡 Some mutual funds help you save on taxes. Tax-saving mutual funds like Equity Linked Savings Schemes (ELSS) offer deductions under Section 80C of the Income Tax Act. This means you can reduce your taxable income while growing your wealth.",
+        "💡Long-term Capital Gains (LTCG) on equities (held for more than a year) are taxed at 10% (for gains exceeding ₹1 lakh in India), which is lower than many other forms of income.",
       category: "Growth",
       readTime: "7 Mins Read",
     },
     {
-      title: "Safe & Transparent",
+      title: "Hedge Against Inflation",
       image: safe,
       description:
-        "💡 Mutual funds are regulated by the government, so they are safe and trustworthy. All mutual funds in India are regulated by SEBI (Securities and Exchange Board of India). This ensures transparency, investor protection, and proper fund management.",
+        "💡Unlike fixed-income investments, equities tend to grow over time, helping you beat inflation and maintain purchasing power.",
       category: "Growth",
       readTime: "7 Mins Read",
     },
     {
-      title: "Money Grows Faster",
+      title: "Liquidity",
       image: grow,
       description:
-        "💡 Thanks to the power of compounding, your money keeps growing if you stay invested for the long term. Mutual funds reinvest your earnings, allowing your money to multiply over time. The longer you stay invested, the more your wealth grows.",
+        "💡Stocks are traded on stock exchanges and can be bought or sold easily, making equity investments highly liquid compared to real estate or other fixed assets.",
       category: "Growth",
       readTime: "7 Mins Read",
     },
@@ -52,13 +52,10 @@ const MutualBenifits = () => {
           <div className="lg:pr-8">
             <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
               <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
-                Benefits of Mutual Funds
+                Benefits of Equity
               </h1>
               <p className="mt-6 text-base font-normal leading-7 text-gray-900">
-                Mutual funds are one of the best ways to grow your money
-                safely and efficiently. They allow you to invest in different
-                assets like stocks, bonds, and other securities without
-                needing expert knowledge.
+              Equity investing can be a great tool for wealth creation, but it comes with risks. A long-term, diversified, and well-researched approach helps maximize benefits while managing risk.
               </p>
               <p className="mt-8 text-base font-bold text-gray-900">
                 Join to get free updates every week

@@ -1,20 +1,25 @@
 import React from "react";
-import Banner from "./MutualBanner"
-import Faq from "./MutualFaq"
-import Hero from './MutualHero'
-import Clac from '../../EMICalculator'
-import Benifits from './MutualBenifits'
+import Banner from "./MutualBanner";
+import Faq from "./MutualFaq";
+import Hero from "./MutualHero";
+import Clac from "../../EMICalculator";
+import Benifits from "./MutualBenifits";
+import Why from "./WhyMutual";
+import Other from "./OtherPlans";
 
 const MutualFunds = () => {
-    return (
-        <>
-            
-            <Banner />
-            <Hero />
-            <Clac />
-            <Benifits />
-            <Faq />
-        </>
+  return (
+    <>
+      <Banner />
+      <Hero />
+    
+      <Benifits />
+      <Why />
+      <Clac />
+      
+      <Other />
+      <Faq />
+    </>
   );
 };
 export default MutualFunds;
