@@ -1,12 +1,12 @@
 import React from "react";
-import hbanner from "../public/images/generalinsurance.png"; // Adjust path as needed
+import hbanner from "../public/images/hbanner.png"; // Adjust path as needed
 
 const GeneralBanner = () => {
   return (
     <div className="flex flex-row items-center justify-between lg: gap-6 min-h-[164px] py-8 px-8 md:px-16 bg-gradient-to-b from-[#3feb3f89] to-white font-sans overflow-hidden">
       <div className=" text-left">
-        <h1 className="text-xl lg:text-4xl font-bold text-green-700">Health insurance</h1>
-        <p className="text-xs lg:text-xl text-green-700 mt-4">
+        <h1 className="text-2xl lg:text-4xl font-bold text-green-700">Health insurance</h1>
+        <p className="text-md lg:text-xl text-green-700 mt-4">
         "Your health is your wealth. Protect it with the right insurance."
         </p>
         <button

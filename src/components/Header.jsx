@@ -90,10 +90,8 @@ const Header = () => {
                     <Link to="/Fixed" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <BsBank2 className="text-xl text-teal-500" /> Fixed Deposit
                     </Link>
-                    <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
-                      <FaMoneyBillTrendUp className="text-xl text-green-700" /> Portfolio Management
-                    </Link>
-                    <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
+                    
+                    <Link to="/Eq" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <FaMoneyBillTrendUp className="text-xl text-green-700" /> Equity
                     </Link>
                   </ul>
@@ -105,8 +103,11 @@ const Header = () => {
                     OTHER
                   </h3>
                   <ul className="p-2 space-y-4">
-                    <Link to="/MutualFund" className="flex text-gray-900 gap-2 hover:text-amber-600">
+                    <Link to="/Risk" className="flex text-gray-900 gap-2 hover:text-amber-600">
                       <GrMoney className="text-xl text-[#ff6b00]" /> Risk Management
+                    </Link>
+                    <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
+                      <FaMoneyBillTrendUp className="text-xl text-green-700" /> Portfolio Management
                     </Link>
                     <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <BsBank2 className="text-xl text-teal-500" /> Claim Advisory
@@ -152,27 +153,28 @@ const Header = () => {
                   <li>
                     <h4 className="font-semibold mt-2">Insurances</h4>
                     <ul className="pl-4 space-y-1 list-disc list-inside">
-                      <li><Link to="/Generalinsurance">General Insurance</Link></li>
-                      <li><Link to="/Lifeinsurance">Life Insurance</Link></li>
-                      <li><Link to="/Healthinsurance">Health Insurance</Link></li>
+                      <li><Link to="/Generalinsurance" onClick={() => setIsDrawerOpen(false)}>General Insurance</Link></li>
+                      <li><Link to="/Lifeinsurance" onClick={() => setIsDrawerOpen(false)}>Life Insurance</Link></li>
+                      <li><Link to="/Healthinsurance" onClick={() => setIsDrawerOpen(false)}>Health Insurance</Link></li>
                     </ul>
                   </li>
               
                   <li>
                     <h4 className="font-semibold mt-2">Investments</h4>
                     <ul className="pl-4 space-y-1 list-disc list-inside">
-                      <li><Link to="/MutualFund">Mutual Funds</Link></li>
-                      <li><Link to="/Fixed">Fixed Deposit</Link></li>
-                      <li><Link to="/bonds">Portfolio Management</Link></li>
-                      <li><Link to="/bonds">Equity</Link></li>
+                      <li><Link to="/MutualFund" onClick={() => setIsDrawerOpen(false)}>Mutual Funds</Link></li>
+                      <li><Link to="/Fixed" onClick={() => setIsDrawerOpen(false)}>Fixed Deposit</Link></li>
+
+                      <li><Link to="/Eq" onClick={() => setIsDrawerOpen(false)}>Equity</Link></li>
                     </ul>
                   </li>
               
                   <li>
                     <h4 className="font-semibold mt-2">Other</h4>
                     <ul className="pl-4 space-y-1 list-disc list-inside">
-                      <li><Link to="/MutualFund">Risk Management</Link></li>
-                      <li><Link to="/bonds">Claim Advisory</Link></li>
+                      <li><Link to="/Risk" onClick={() => setIsDrawerOpen(false)}>Risk Management</Link></li>
+                      <li><Link to="/bonds" onClick={() => setIsDrawerOpen(false)}>Portfolio Management</Link></li>
+                      <li><Link to="/bonds" onClick={() => setIsDrawerOpen(false)}>Claim Advisory</Link></li>
                     </ul>
                   </li>
                 </ul>

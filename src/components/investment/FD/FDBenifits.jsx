@@ -1,99 +1,117 @@
 import React from "react";
+import startsmall from "../../../public/images/return.jpg";
+import tax from "../../../public/images/safety.jpg";
+import safe from "../../../public/images/tenure.jpg";
+import grow from "../../../public/images/loan2.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import startsmall from "../../../public/images/startsmall.jpg";
-import tax from "../../../public/images/tax-benifits.jpg";
-import safe from "../../../public/images/safe-transparant.jpg";
-import grow from "../../../public/images/moneygrow.jpg";
-
 const MutualBenifits = () => {
   const cards = [
     {
-      title: "Safe & Secure Investment 🔒",
+      title: "Guaranteed Returns",
       image: startsmall,
       description:
-        "💡 FDs are low-risk investments backed by banks and financial institutions.",
+        "💡 FDs offer a fixed interest rate, ensuring stable and predictable returns without market fluctuations.",
+      category: "Growth",
+      readTime: "7 Mins Read",
     },
     {
-      title: "Guaranteed Returns 📈",
+      title: "Capital Safety",
       image: tax,
       description:
-        "💡 Fixed interest rates ensure stable earnings over the chosen tenure.",
+        "💡 Since FDs are not linked to the stock market, they provide a risk-free investment option, making them ideal for conservative investors.",
+      category: "Growth",
+      readTime: "7 Mins Read",
     },
     {
-      title: "Flexible Tenure Options 🗓️",
+      title: "Flexible Tenure",
       image: safe,
       description:
-        "💡 Choose an investment period from 7 days to 10 years. Helps in financial planning.",
+        "💡 You can choose an FD tenure ranging from a few days to several years based on your financial goals.",
+      category: "Growth",
+      readTime: "7 Mins Read",
     },
     {
-      title: "Loan Against FD 🏦",
+      title: "Loan Against FD",
       image: grow,
       description:
-        "💡 Need emergency funds? Get a loan of up to 90% of your FD value.",
+        "💡 You can avail a loan against your FD (usually up to 90% of the deposit amount) at a lower interest rate than personal loans.",
+      category: "Growth",
+      readTime: "7 Mins Read",
     },
   ];
 
   return (
-    <section className="bg-gray-50 py-12">
-      <h1 className="text-center font-bold text-3xl text-black mb-8">
-        Fixed Deposit Benefits
-      </h1>
-
-      <div className="max-w-auto mx-auto px-6">
-        <div className="lg:flex lg:items-center lg:gap-6 lg:space-x-8">
-          {/* Left Section (Text) */}
-          <div className="lg:w-2/5">
-            <h2 className="text-4xl font-bold text-gray-900 sm:text-4xl">
-              Benefits of Fixed Deposit
-            </h2>
-            <p className="mt-6 text-xl text-gray-700 leading-relaxed">
-              Fixed deposits are one of the safest and most reliable ways to grow your savings. They offer guaranteed returns with fixed interest rates, ensuring financial stability while keeping your money secure.
-            </p>
-            <p className="mt-6 text-lg font-semibold text-gray-900">
-              Join to get free updates every week.
-            </p>
+    <div>
+      {/* <h1 className="text-center font-bold text-3xl">Mutual Benefits</h1> */}
+      <section className="relative bg-gray-50">
+        <div className="relative z-10 px-4 py-12 sm:py-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-20 xl:py-28 lg:grid lg:grid-cols-2">
+          <div className="lg:pr-8">
+            <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
+              <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+                Benefits of Fixed Deposit
+              </h1>
+              <p className="mt-6 text-base font-normal leading-7 text-gray-900">
+              A Fixed Deposit (FD) is a secure investment option offered by banks and financial institutions, where you deposit a lump sum for a fixed tenure at a predetermined interest rate. Here are the key benefits of investing in an FD:
+              </p>
+              <p className="mt-8 text-base font-bold text-gray-900">
+                Join to get free updates every week
+              </p>
+            </div>
           </div>
-
-          {/* Right Section (Swiper Cards) */}
-          <div className="lg:w-3/5 mt-8 lg:mt-0">
+        </div>
+        <div className="pb-8 lg:absolute lg:inset-0 lg:pb-0">
+          <div className="flex flex-col items-center justify-center lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <Swiper
               modules={[Pagination, Autoplay]}
-              slidesPerView={1}
-              spaceBetween={16}
-              loop={true}
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              spaceBetween={20}
+              slidesPerView={1.5} // Default: Show 1.5 cards on small screens
               breakpoints={{
-                768: { slidesPerView: 2, spaceBetween: 24 },
-                1024: { slidesPerView: 2, spaceBetween: 32 },
+                640: { slidesPerView: 1.5, spaceBetween: 20 }, // Small screens (partially show the next card)
+                1024: { slidesPerView: 2, spaceBetween: 30 }, // Large screens (show 2 cards fully)
               }}
+              autoplay={{ delay: 3000 }}
+              pagination={{ clickable: true, el: ".swiper-pagination" }}
+              className="w-full px-4"
             >
               {cards.map((card, index) => (
                 <SwiperSlide key={index}>
-                  <div className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-md transition-all hover:shadow-lg w-full h-[480px] md:h-[500px]">
-                    <img
-                      src={card.image}
-                      alt={card.title}
-                      className="rounded-lg w-full h-[250px] object-cover mb-4"
-                    />
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 text-lg text-gray-700 leading-relaxed">
-                      {card.description}
-                    </p>
+                  <div className="relative flex flex-col h-full bg-white border border-gray-100 rounded-xl overflow-hidden">
+                    <div className="w-full h-48">
+                      <img
+                        className="object-cover w-full h-full"
+                        src={card.image}
+                        alt={card.title}
+                      />
+                    </div>
+                    <div className="flex-1 px-4 py-5">
+                      <p className="text-lg font-bold text-gray-900">
+                        {card.title}
+                      </p>
+                      <p className="mt-3 text-sm text-gray-500 line-clamp-3">
+                        {card.description}
+                      </p>
+                    </div>
+                    <div className="px-4 py-5 mt-auto border-t border-gray-100">
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm font-medium text-gray-900">
+                          {card.category} • {card.readTime}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
+            {/* Pagination placed below the Swiper */}
+            <div className="swiper-pagination mt-6"></div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

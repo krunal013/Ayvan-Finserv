@@ -1,24 +1,23 @@
 import React from "react";
-import Banner from "./FDBanner"
-import Faq from "./FDFaq"
-import Hero from './FDHero'
+import Banner from "./Eqbanner"
+import Faq from "./Eqfaq"
+import Hero from './Eqhero'
 import Clac from '../../EMICalculator'
-import Benifits from './FDBenifits'
-import Other from "./OtherPlans";
+import Benifits from './Eqbanifits'
 import Why from "./WhyMutual";
+import Other from"./OtherPlans";
 
-const Fixed = () => {
+const Eq = () => {
     return (
         <>
             
             <Banner />
             <Hero />
-            <Why/>
+             <Why/>
             <Benifits />
             <Other/>
             <Faq />
-            
         </>
   );
 };
-export default Fixed;
+export default Eq;

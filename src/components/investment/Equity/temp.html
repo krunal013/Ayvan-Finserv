@@ -1,0 +1,100 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import startsmall from "../../../public/images/startsmall.jpg";
+import tax from "../../../public/images/tax-benifits.jpg";
+import safe from "../../../public/images/safe-transparant.jpg";
+import grow from "../../../public/images/moneygrow.jpg";
+
+const MutualBenifits = () => {
+  const cards = [
+    {
+      title: "Safe & Secure Investment 🔒",
+      image: startsmall,
+      description:
+        "💡 FDs are low-risk investments backed by banks and financial institutions.",
+    },
+    {
+      title: "Guaranteed Returns 📈",
+      image: tax,
+      description:
+        "💡 Fixed interest rates ensure stable earnings over the chosen tenure.",
+    },
+    {
+      title: "Flexible Tenure Options 🗓️",
+      image: safe,
+      description:
+        "💡 Choose an investment period from 7 days to 10 years. Helps in financial planning.",
+    },
+    {
+      title: "Loan Against FD 🏦",
+      image: grow,
+      description:
+        "💡 Need emergency funds? Get a loan of up to 90% of your FD value.",
+    },
+  ];
+
+  return (
+    <section className="bg-gray-50 py-12">
+      <h1 className="text-center font-bold text-3xl text-black mb-8">
+        Equity Benefits
+      </h1>
+
+      <div className="max-w-auto mx-auto px-6">
+        <div className="lg:flex lg:items-center lg:gap-6 lg:space-x-8">
+          {/* Left Section (Text) */}
+          <div className="lg:w-2/5">
+            <h2 className="text-4xl font-bold text-gray-900 sm:text-4xl">
+              Benefits of Equity
+            </h2>
+            <p className="mt-6 text-xl text-gray-700 leading-relaxed">
+            Equity investing can be a great tool for wealth creation, but it comes with risks. A long-term, diversified, and well-researched approach helps maximize benefits while managing risk.
+            </p>
+            <p className="mt-6 text-lg font-semibold text-gray-900">
+              Join to get free updates every week.
+            </p>
+          </div>
+
+          {/* Right Section (Swiper Cards) */}
+          <div className="lg:w-3/5 mt-8 lg:mt-0">
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              slidesPerView={1}
+              spaceBetween={16}
+              loop={true}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              breakpoints={{
+                768: { slidesPerView: 2, spaceBetween: 24 },
+                1024: { slidesPerView: 2, spaceBetween: 32 },
+              }}
+            >
+              {cards.map((card, index) => (
+                <SwiperSlide key={index}>
+                  <div className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-md transition-all hover:shadow-lg w-full h-[480px] md:h-[500px]">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="rounded-lg w-full h-[250px] object-cover mb-4"
+                    />
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-lg text-gray-700 leading-relaxed">
+                      {card.description}
+                    </p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MutualBenifits;

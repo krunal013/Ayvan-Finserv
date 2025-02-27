@@ -11,8 +11,10 @@ import Lifeinsurance from "./components/Lifeinsurance";
 import Healthinsurance from "./components/Healthinsurance";
 import MutualFund from "./components/investment/MutualFunds/MutualFunds";
 import Fixed from "./components/investment/FD/Fixed";
+import Eq from "./components/investment/Equity/Eq";
 import { SignIn } from "./components/SignIn";
 import Footer from "./components/Footer";
+import Risk from"./components/investment/others/Risk";
 
 import SignUp from "./components/SignUp";
 import PricingBox from "./components/PricingBox";
@@ -46,6 +48,8 @@ function App() {
               <Route path="/Healthinsurance" element={<Healthinsurance />} />
               <Route path="/MutualFund" element={<MutualFund />} />
               <Route path="/Fixed" element={<Fixed />} />
+              <Route path="/Eq" element={<Eq />} />
+              <Route path="/Risk" element={<Risk />} />
               <Route path="/Services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />{" "}
               {/* Fix Contact Route */}
