@@ -1,5 +1,5 @@
 import React from "react";
-import hbanner from "../public/images/generalinsurance.png"; // Adjust path as needed
+import hbanner from "../public/images/hbanner.png"; // Adjust path as needed
 
 const GeneralBanner = () => {
   return (

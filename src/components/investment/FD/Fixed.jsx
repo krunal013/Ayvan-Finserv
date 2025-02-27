@@ -13,9 +13,8 @@ const Fixed = () => {
             
             <Banner />
             <Hero />
-            {/* <Clac /> */}
-            <Benifits />
             <Why/>
+            <Benifits />
             <Other/>
             <Faq />
             

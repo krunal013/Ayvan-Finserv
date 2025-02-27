@@ -103,7 +103,7 @@ const Header = () => {
                     OTHER
                   </h3>
                   <ul className="p-2 space-y-4">
-                    <Link to="/MutualFund" className="flex text-gray-900 gap-2 hover:text-amber-600">
+                    <Link to="/Risk" className="flex text-gray-900 gap-2 hover:text-amber-600">
                       <GrMoney className="text-xl text-[#ff6b00]" /> Risk Management
                     </Link>
                     <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
@@ -172,7 +172,7 @@ const Header = () => {
                   <li>
                     <h4 className="font-semibold mt-2">Other</h4>
                     <ul className="pl-4 space-y-1 list-disc list-inside">
-                      <li><Link to="/MutualFund" onClick={() => setIsDrawerOpen(false)}>Risk Management</Link></li>
+                      <li><Link to="/Risk" onClick={() => setIsDrawerOpen(false)}>Risk Management</Link></li>
                       <li><Link to="/bonds" onClick={() => setIsDrawerOpen(false)}>Portfolio Management</Link></li>
                       <li><Link to="/bonds" onClick={() => setIsDrawerOpen(false)}>Claim Advisory</Link></li>
                     </ul>

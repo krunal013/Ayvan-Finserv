@@ -5,38 +5,37 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 const faqData = {
   General: [
     {
-      question: "What are mutual funds?",
+      question: "What are Fixed Deposit?",
       answer:
-        "Mutual funds are investment vehicles that pool money from many investors to purchase a diversified portfolio of stocks, bonds, or other securities.",
+        "A Fixed Deposit (FD) is a financial instrument offered by banks and non-banking financial companies (NBFCs) where you deposit a lump sum amount for a fixed tenure at a predetermined interest rate. It is considered a low-risk investment because the returns are guaranteed.",
     },
     {
-      question: "How do mutual funds work?",
+      question: "How do Fixed Deposit work?",
       answer:
-        "They are managed by professionals who allocate the fund's assets and attempt to produce capital gains or income for the investors.",
+        "Fixed Deposits (FDs) work by allowing you to deposit a lump sum amount with a bank or financial institution for a predetermined period at a fixed interest rate. At the end of the tenure, you receive your principal amount along with the accrued interest.",
     },
     {
-      question: "What are the benefits of investing in mutual funds?",
-      answer:
-        "Benefits include diversification, professional management, liquidity, and a relatively low cost compared to other investment vehicles.",
+      question: "What are the benefits of investing in Fixed deposit?",
+      answer:"Investing in a Fixed Deposit (FD) offers several benefits, making it a preferred choice for risk-averse investors. One of the biggest advantages is the guaranteed returns, as the interest rate remains fixed throughout the tenure, providing financial stability regardless of market fluctuations.",
     },
   ],
   Support: [
     {
-      question: "How do I choose the right mutual fund?",
+      question: "How do I choose the right Fixed Deposit?",
       answer:
-        "Research the fund's performance history, management team, fees, and investment strategy to find one that aligns with your financial goals.",
+        "Choosing the right Fixed Deposit (FD) requires careful consideration of several factors to ensure it aligns with your financial goals. The first step is to determine the purpose of your FD investment—whether it is for short-term savings, regular income, tax benefits, or long-term wealth accumulation. Once your goal is clear, compare interest rates offered by different banks and financial institutions, as higher interest rates will maximize your returns.",
     },
     {
-      question: "Are mutual funds risky?",
+      question: "Are Fixed Deposit risky?",
       answer:
-        "All investments carry risk. However, mutual funds diversify your investment, which can lower overall risk compared to individual securities.",
+        "Fixed Deposits (FDs) are generally considered one of the safest investment options since they offer guaranteed returns and are not affected by market fluctuations. Unlike stocks or mutual funds, where returns depend on market performance, an FD provides a fixed interest rate for the chosen tenure, ensuring stability.",
     },
   ],
   Others: [
     {
-      question: "What fees are associated with mutual funds?",
+      question: "What fees are associated with Fixed deposit?",
       answer:
-        "Common fees include management fees, expense ratios, and sometimes load fees when buying or selling the fund.",
+        "Fixed Deposits (FDs) generally do not have upfront fees, but certain charges may apply in specific situations. If you withdraw your FD before maturity, banks typically impose a premature withdrawal penalty ranging from 0.5% to 1% on the applicable interest rate. Some banks also charge a cancellation fee for auto-renewed FDs if withdrawn within a few days.",
     },
   ],
 };

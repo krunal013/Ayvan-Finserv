@@ -1,13 +1,13 @@
 import React from "react";
-import Banner from "./Eqbanner"
-import Faq from "./Eqfaq"
-import Hero from './Eqhero'
-import Clac from '../../EMICalculator'
-import Benifits from './Eqbanifits'
+import Banner from "./Riskbanner"
+import Faq from "./Riskfaq"
+import Hero from './Riskhero'
+
+import Benifits from './Riskbanifits'
 import Why from "./WhyMutual";
 import Other from"./OtherPlans";
 
-const Eq = () => {
+const Risk = () => {
     return (
         <>
             
@@ -20,4 +20,4 @@ const Eq = () => {
         </>
   );
 };
-export default Eq;
+export default Risk;

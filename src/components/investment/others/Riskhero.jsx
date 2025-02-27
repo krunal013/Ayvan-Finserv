@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+    import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import hero from "../../../public/images/gold-bull-backgrounds-graphics-elements-related-financial-sector.png";
@@ -17,10 +17,10 @@ export default () => {
               {/* Left Side - Title & Description */}
               <div className="self-center lg:col-span-4" data-aos="fade-up">
                 <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">
-                  What is Equity?
+                  What is Risk Managment?
                 </h1>
                 <p className="mt-5 text-base font-normal leading-7 text-gray-500">
-                  Equity investment means buying shares (stocks) of a company, giving you partial ownership. As the company grows, the stock price may increase, allowing you to make a profit.
+                Risk Management is the process of identifying, assessing, and mitigating potential risks that could negatively impact an organization, project, investment, or decision. The goal is to minimize losses and maximize opportunities while ensuring stability and success.
                 </p>
               </div>
 

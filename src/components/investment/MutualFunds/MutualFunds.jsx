@@ -12,9 +12,9 @@ const MutualFunds = () => {
     <>
       <Banner />
       <Hero />
-    
+     <Why />
       <Benifits />
-      <Why />
+     
       <Clac />
       
       <Other />

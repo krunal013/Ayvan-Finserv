@@ -16,12 +16,12 @@ const OtherPlans = () => {
   // Array of card contents with associated react icons and redirect links
   const cards = [
     {
-      title: "Mutual Funds",
+      title: "Fixed Deposit",
       description:
-        "A Mutual Fund is an investment vehicle that pools money from multiple investors to invest in a diversified portfolio of stocks, bonds, or other assets.",
+        "Secure and predictable returns with our fixed deposit plans designed for stability.",
       icon: <FaPiggyBank className="text-green-500" size={40} />,
       role: "Investment Specialist",
-      link: "/MutualFund", // update your route
+      link: "/Fixed", // update your route
     },
     {
       title: "Equity",
@@ -114,4 +114,4 @@ const OtherPlans = () => {
   );
 };
 
-export default OtherPlans;
+export default OtherPlans
