@@ -61,14 +61,14 @@ const MutualBenifits = () => {
                 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl"
                 data-aos="fade-up"
               >
-                Benefits of Risk Managment
+                Benefits of Portfolio Managment
               </h1>
               <p
                 className="mt-6 text-base font-normal leading-7 text-gray-900"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-              Risk management offers numerous benefits that contribute to the long-term success and stability of an organization. It improves decision-making by identifying potential risks in advance, allowing businesses to make informed choices. Financial protection is another key advantage, as effective risk management minimizes unexpected losses and ensures financial stability.
+              Portfolio management plays a crucial role in optimizing investments by balancing risk and return effectively. One of its primary benefits is ensuring optimized returns, where investments are strategically allocated to maximize profits while minimizing potential losses. It allows investors to create a well-diversified portfolio, spreading investments across various asset classes like stocks, bonds, and real estate to reduce risk and enhance stability
               </p>
               <p
                 className="mt-8 text-base font-bold text-gray-900"

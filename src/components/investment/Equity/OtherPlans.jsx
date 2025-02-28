@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -15,10 +13,6 @@ import {
 import { Link } from "react-router-dom";
 
 const OtherPlans = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
   const cards = [
     {
       title: "Fixed Deposit",
@@ -50,7 +44,7 @@ const OtherPlans = () => {
         "Mitigate potential losses with our comprehensive risk management strategies.",
       icon: <FaShieldAlt className="text-red-500" size={40} />,
       role: "Risk Advisor",
-      link: "/RM",
+      link: "/Risk",
     },
     {
       title: "Claim Advisory",
@@ -64,17 +58,11 @@ const OtherPlans = () => {
 
   return (
     <div className="w-full p-10">
-      <span
-        className="text-sm text-gray-500 font-medium mb-4 block lg:text-xl"
-        data-aos="fade-up"
-      >
+      <span className="text-sm text-gray-500 font-medium mb-4 block lg:text-xl">
         Explore
       </span>
-      <h2
-        className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-4"
-        data-aos="fade-up"
-      >
-        More Investment{" "}
+      <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-4">
+        More Investment {" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-tr from-orange-500 to-orange-500">
           Options
         </span>
@@ -93,7 +81,7 @@ const OtherPlans = () => {
         }}
       >
         {cards.map((card, index) => (
-          <SwiperSlide key={index} data-aos="fade-up" data-aos-delay={index * 200}>
+          <SwiperSlide key={index}>
             <Link to={card.link} className="block">
               <div className="group bg-white border border-solid border-gray-300 rounded-2xl p-6 transition-all duration-500 hover:border-indigo-600">
                 <div className="flex items-center gap-5 mb-5 sm:mb-9">

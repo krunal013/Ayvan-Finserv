@@ -1,52 +1,53 @@
 import { useState } from "react";
-import Howtoinvest from "../../../public/images/how to invest.png"
-import Whytoinvest from "../../../public/images/whyinvestment.png"
-import Calctoinvest from "../../../public/images/time-during-calculator.png"
+import analysis from "../../../public/images/analysis.png"
+import Whytoinvest from "../../../public/images/managment.png"
+import Calctoinvest from "../../../public/images/mitigation.png"
 
-const WhyMutual = () => {
-  const [activeTab, setActiveTab] = useState("How to Invest");
+const WhyRiskManagement = () => {
+  const [activeTab, setActiveTab] = useState("Identifying Risks");
 
   const content = {
-    "How to Invest": {
-      title: "How to Start Investing in Mutual Funds?",
+    "Identifying Risks": {
+      title: "How to Identify Risks in Business?",
       description:
-        "Investing in mutual funds is simple and accessible. Follow these steps to begin your investment journey:",
+        "Effective risk management starts with identifying potential risks that could impact business operations:",
       points: [
-        "Set your financial goals and investment horizon",
-        "Choose between SIP (Systematic Investment Plan) or Lump Sum investment",
-        "Select a mutual fund type (Equity, Debt, Hybrid, etc.)",
-        "Analyze the fund’s past performance and risk factors",
-        "Open an investment account with a broker or AMC",
-        "Start investing and monitor your portfolio regularly",
+        "Analyze internal and external business environments",
+        "Conduct risk assessments and SWOT analysis",
+        "Identify financial, operational, and strategic risks",
+        "Consult stakeholders for risk insights",
+        "Use historical data to predict potential threats",
+        "Monitor industry trends and regulatory changes",
       ],
       color: "bg-orange-50",
-      image: Howtoinvest, // ✅ Fixed Image Path
+      image: analysis, // ✅ Fixed Image Path
     },
-    "Why to Invest": {
-      title: "Why Should You Invest in Mutual Funds?",
+    "Why Risk Management": {
+      title: "Why is Risk Management Important?",
       description:
-        "Mutual funds offer diversification, professional management, and better returns over time. Key benefits:",
+        "Risk management ensures business continuity and helps organizations make informed decisions. Key benefits:",
       points: [
-        "Diversification reduces risk",
-        "Professional fund management",
-        "Affordable investment options",
-        "Compounding benefits over time",
-        "Higher returns than traditional savings",
-        "Liquidity and ease of withdrawal",
+        "Prevents financial losses and disruptions",
+        "Improves decision-making and strategic planning",
+        "Enhances compliance with regulations",
+        "Protects reputation and stakeholder confidence",
+        "Optimizes resource allocation for better efficiency",
+        "Increases resilience against uncertainties",
       ],
       color: "bg-green-50",
-      image:Whytoinvest, // ✅ Fixed Image Path
+      image: Whytoinvest, // ✅ Fixed Image Path
     },
-    "Calculate Returns": {
-      title: "How to Calculate Mutual Fund Returns?",
+    "Mitigating Risks": {
+      title: "How to Mitigate Risks Effectively?",
       description:
-        "Understanding return calculations helps in making informed decisions. Here’s how to calculate returns:",
+        "Risk mitigation involves proactive strategies to minimize threats and their impact on business operations:",
       points: [
-        "Calculate Absolute Return: [(Selling Price - Purchase Price) / Purchase Price] × 100",
-        "Use CAGR (Compound Annual Growth Rate) for long-term investments",
-        "Understand risk-adjusted returns using Sharpe Ratio",
-        "Check XIRR for SIP investments",
-        "Factor in taxes and expense ratios",
+        "Develop a risk management framework and policies",
+        "Diversify investments and revenue streams",
+        "Implement robust cybersecurity measures",
+        "Train employees on risk awareness and response",
+        "Use insurance and financial hedging tools",
+        "Continuously monitor and update risk strategies",
       ],
       color: "bg-blue-50",
       image: Calctoinvest, // ✅ Fixed Image Path
@@ -56,7 +57,7 @@ const WhyMutual = () => {
   return (
     <div className="flex flex-col items-center px-6 py-10">
       <h2 className="text-3xl text-gray-800 font-bold text-center mb-4">
-        How, Why & When You Should Invest in Mutual Funds?
+        How, Why & When You Should Manage Risks?
       </h2>
 
       {/* Tab Buttons */}
@@ -83,7 +84,7 @@ const WhyMutual = () => {
         {/* Image on top for small screens, right for large screens */}
         <img
           src={content[activeTab].image}
-          alt="Investment"
+          alt="Risk Management"
           className="w-44 h-44 mb-4 lg:mb-0 lg:ml-4 lg:order-2"
         />
 
@@ -102,4 +103,4 @@ const WhyMutual = () => {
   );
 };
 
-export default WhyMutual;
+export default WhyRiskManagement;

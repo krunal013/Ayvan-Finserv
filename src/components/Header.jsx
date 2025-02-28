@@ -106,10 +106,10 @@ const Header = () => {
                     <Link to="/Risk" className="flex text-gray-900 gap-2 hover:text-amber-600">
                       <GrMoney className="text-xl text-[#ff6b00]" /> Risk Management
                     </Link>
-                    <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
+                    <Link to="/Port" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <FaMoneyBillTrendUp className="text-xl text-green-700" /> Portfolio Management
                     </Link>
-                    <Link to="/bonds" className="flex text-gray-900 gap-2 hover:text-orange-600">
+                    <Link to="/Claim" className="flex text-gray-900 gap-2 hover:text-orange-600">
                       <BsBank2 className="text-xl text-teal-500" /> Claim Advisory
                     </Link>
                   </ul>
@@ -173,8 +173,8 @@ const Header = () => {
                     <h4 className="font-semibold mt-2">Other</h4>
                     <ul className="pl-4 space-y-1 list-disc list-inside">
                       <li><Link to="/Risk" onClick={() => setIsDrawerOpen(false)}>Risk Management</Link></li>
-                      <li><Link to="/bonds" onClick={() => setIsDrawerOpen(false)}>Portfolio Management</Link></li>
-                      <li><Link to="/bonds" onClick={() => setIsDrawerOpen(false)}>Claim Advisory</Link></li>
+                      <li><Link to="/Port" onClick={() => setIsDrawerOpen(false)}>Portfolio Management</Link></li>
+                      <li><Link to="/Claim" onClick={() => setIsDrawerOpen(false)}>Claim Advisory</Link></li>
                     </ul>
                   </li>
                 </ul>

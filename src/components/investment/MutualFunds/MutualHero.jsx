@@ -45,7 +45,7 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-1.png"
+                        src="https://img.freepik.com/free-photo/front-view-two-stacks-coins-with-jar-plants_23-2148803919.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
@@ -64,7 +64,7 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-2.png"
+                        src="https://img.freepik.com/premium-vector/gold-rupee-coins-indian-money-stacked-golden-coins_53562-8908.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
@@ -83,7 +83,7 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-3.png"
+                        src="https://img.freepik.com/premium-photo/tax-concept-with-wooden-cubes-with-word-tax-stacked-coins_38391-1257.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">

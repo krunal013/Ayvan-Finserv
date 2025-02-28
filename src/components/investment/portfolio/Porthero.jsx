@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hero from "../../../public/images/equityhero.png";
+import hero from "../../../public/images/port.jpg";
 
 export default () => {
   useEffect(() => {
@@ -17,10 +17,10 @@ export default () => {
               {/* Left Side - Title & Description */}
               <div className="self-center lg:col-span-4" data-aos="fade-up">
                 <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">
-                  What is Equity?
+                  What is Portfolio Managment?
                 </h1>
                 <p className="mt-5 text-base font-normal leading-7 text-gray-500">
-                  Equity investment means buying shares (stocks) of a company, giving you partial ownership. As the company grows, the stock price may increase, allowing you to make a profit.
+                Portfolio Management is the process of selecting, managing, and overseeing a collection of investments (such as stocks, bonds, mutual funds, real estate, and other assets) to achieve specific financial goals while balancing risk and return.
                 </p>
               </div>
 
@@ -31,7 +31,7 @@ export default () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  ⚡️ Why invest in Equity
+                  ⚡️ Why Portfolio Managment
                 </p>
 
                 <div className="mt-6 space-y-6 lg:space-y-8">
@@ -39,12 +39,12 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://img.freepik.com/premium-photo/green-red-trading-financial-candlesticks-pattern-chart-front-modern-laptop-notebook-computer-white-background-3d-rendering_476612-25317.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
+                        src="https://img.freepik.com/premium-photo/scared-businessman-creative-crash-recession-chart_670147-74970.jpg?uid=R46050617&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
                         <a href="#" title="">
-                          High Return Potential 🚀
+                        Maximizing Returns with Balanced Risk ⚖️
                           <span className="absolute inset-0" aria-hidden="true"></span>
                         </a>
                       </p>
@@ -55,12 +55,13 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://img.freepik.com/premium-photo/businessman-holding-jar-full-golden-coins-with-plant-growing-out-representing-investment-success_9083-24558.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
+                        src="https://img.freepik.com/premium-photo/business-risk-3d-rendering_519469-3230.jpg?uid=R46050617&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
                         <a href="#" title="">
-                          Passive Income through Dividends 💵
+                        Diversification for Stability 🌍
+
                           <span className="absolute inset-0" aria-hidden="true"></span>
                         </a>
                       </p>
@@ -71,12 +72,12 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://img.freepik.com/premium-vector/vector-illustration-income-from-investment-return-with-businessman-with-percentage-sign-symbol_675567-1965.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
+                        src="https://img.freepik.com/premium-photo/businessman-hold-low-poly-polygon-shield-with-tick-iconsecure-access-system-conceptbusiness-financial-warranty-investmentantivirus-concepttechnology-securityprotection-networksafe-data_150455-20840.jpg?uid=R46050617&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
                         <a href="#" title="">
-                          Inflation Beating Investment 🔥
+                        Aligning Investments with Financial Goals 🎯
                           <span className="absolute inset-0" aria-hidden="true"></span>
                         </a>
                       </p>
@@ -86,8 +87,8 @@ export default () => {
               </div>
 
               {/* Right Side - Image */}
-              <div className="self-end lg:col-span-5" data-aos="fade-left">
-                <img className=" mx-auto" src={hero} alt="" />
+              <div className="self-end lg:col-span-5">
+                <img className=" mx-auto " src={hero} alt="" />
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
-import Howtoinvest from "../../../public/images/how to invest.png"
-import Whytoinvest from "../../../public/images/whyinvestment.png"
+import Howtoinvest from "../../../public/images/invest5.png"
+import Whytoinvest from "../../../public/images/invest2.png"
 import Calctoinvest from "../../../public/images/time-during-calculator.png"
 import { useState, useEffect } from "react";
 import AOS from "aos";

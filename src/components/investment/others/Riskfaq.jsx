@@ -7,38 +7,38 @@ import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 const faqData = {
   General: [
     {
-      question: "What are Equity?",
+      question: "What is Risk Management?",
       answer:
-        "Equity represents ownership in an asset after deducting liabilities. It gives you a stake in a business, property, or investment.",
+        "Risk management is the process of identifying, assessing, and controlling threats to an organization's capital and earnings.",
     },
     {
-      question: "How do Equity work?",
+      question: "Why is Risk Management important?",
       answer:
-        "Equity works by representing ownership in an asset (a company, real estate, or investment). It shows the value left after deducting liabilities and determines your stake in the asset.",
+        "Risk management helps businesses minimize losses, protect assets, and ensure stability by anticipating potential risks and planning accordingly.",
     },
     {
-      question: "What are the benefits of investing in Equity?",
+      question: "What are the key components of Risk Management?",
       answer:
-        "Investing in equity offers several benefits, primarily the potential for high returns compared to other asset classes. It helps in long-term wealth creation as stocks tend to grow in value over time.",
+        "Key components include risk identification, risk assessment, risk mitigation strategies, monitoring, and continuous evaluation.",
     },
   ],
   Support: [
     {
-      question: "How do I choose the right Equity?",
+      question: "How do I assess risks effectively?",
       answer:
-        "Choosing the right equity (stocks) requires careful research and a strategic approach. Start by analyzing the company's fundamentals, including revenue, profit margins, debt levels, and overall financial health.",
+        "Effective risk assessment involves identifying potential threats, analyzing their impact, and determining the likelihood of occurrence.",
     },
     {
-      question: "Are Equity risky?",
+      question: "What are the common risk mitigation strategies?",
       answer:
-        "Yes, equity investments carry risks, as stock prices fluctuate due to market conditions, economic factors, and company performance.",
+        "Common strategies include risk avoidance, risk reduction, risk transfer (insurance), and risk acceptance.",
     },
   ],
   Others: [
     {
-      question: "What fees are associated with Equity?",
+      question: "How often should a risk assessment be conducted?",
       answer:
-        "Investing in equity involves several fees and charges that can impact your overall returns.",
+        "Risk assessments should be conducted regularly, especially when there are significant changes in operations, regulations, or market conditions.",
     },
   ],
 };
@@ -49,7 +49,7 @@ const tabIcons = {
   Others: <FiGrid className="inline-block mr-2" />,
 };
 
-export default function MutualFaq() {
+export default function RiskManagementFaq() {
   const [activeTab, setActiveTab] = useState("General");
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -78,8 +78,6 @@ export default function MutualFaq() {
                 : "text-gray-600"
             }`}
             onClick={() => setActiveTab(tab)}
-            data-aos="fade-up"
-            data-aos-delay="200"
           >
             {tabIcons[tab]} {tab}
           </button>
@@ -116,10 +114,7 @@ export default function MutualFaq() {
         </div>
 
         {/* FAQ Section */}
-        <div
-          className="md:w-3/4 pl-0 md:pl-6 overflow-auto hide-scrollbar"
-          data-aos="fade-right"
-        >
+        <div className="md:w-3/4 pl-0 md:pl-6 overflow-auto hide-scrollbar">
           <div>
             {faqData[activeTab].map((item, index) => (
               <div key={index} className="border-b py-6 last:mb-0">
@@ -130,7 +125,6 @@ export default function MutualFaq() {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  data-aos="fade-up"
                 >
                   {item.question}
                   <span>
@@ -145,7 +139,6 @@ export default function MutualFaq() {
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
                     openIndex === index ? "max-h-40 mt-2" : "max-h-0"
                   }`}
-                  data-aos={openIndex === index ? "zoom-in" : ""}
                 >
                   <p className="text-gray-600">{item.answer}</p>
                 </div>
