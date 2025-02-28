@@ -61,14 +61,14 @@ const MutualBenifits = () => {
                 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl"
                 data-aos="fade-up"
               >
-                Benefits of Risk Managment
+                Benefits of Claim Advisory
               </h1>
               <p
                 className="mt-6 text-base font-normal leading-7 text-gray-900"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-              Risk management offers numerous benefits that contribute to the long-term success and stability of an organization. It improves decision-making by identifying potential risks in advance, allowing businesses to make informed choices. Financial protection is another key advantage, as effective risk management minimizes unexpected losses and ensures financial stability.
+             A Claim Advisory service provides expert guidance to individuals and businesses in handling their claims efficiently, ensuring a smooth and hassle-free process. One of the biggest advantages is maximized compensation, as professionals help you secure the full amount you are entitled to. 
               </p>
               <p
                 className="mt-8 text-base font-bold text-gray-900"

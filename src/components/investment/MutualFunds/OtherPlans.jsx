@@ -37,7 +37,7 @@ const OtherPlans = () => {
         "Personalized portfolio management services to diversify and balance your investments.",
       icon: <FaBriefcase className="text-orange-500" size={40} />,
       role: "Portfolio Manager",
-      link: "/PM", // update your route
+      link: "/Port", // update your route
     },
     {
       title: "Risk Management",
@@ -45,7 +45,7 @@ const OtherPlans = () => {
         "Mitigate potential losses with our comprehensive risk management strategies.",
       icon: <FaShieldAlt className="text-red-500" size={40} />,
       role: "Risk Advisor",
-      link: "/RM", // update your route
+      link: "/Risk", // update your route
     },
     {
       title: "Claim Advisory",

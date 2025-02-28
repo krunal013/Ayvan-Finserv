@@ -1,7 +1,7 @@
     import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import hero from "../../../public/images/gold-bull-backgrounds-graphics-elements-related-financial-sector.png";
+import hero from "../../../public/images/20124620_6230656.jpg";
 
 export default () => {
   useEffect(() => {
@@ -31,7 +31,7 @@ export default () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  ⚡️ Why invest in Equity
+                  ⚡️ Why Risk Managment
                 </p>
 
                 <div className="mt-6 space-y-6 lg:space-y-8">
@@ -39,12 +39,12 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-1.png"
+                        src="https://img.freepik.com/premium-photo/scared-businessman-creative-crash-recession-chart_670147-74970.jpg?uid=R46050617&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
                         <a href="#" title="">
-                          High Return Potential 🚀
+                        📉 Minimizing Financial Losses
                           <span className="absolute inset-0" aria-hidden="true"></span>
                         </a>
                       </p>
@@ -55,12 +55,13 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-2.png"
+                        src="https://img.freepik.com/premium-photo/business-risk-3d-rendering_519469-3230.jpg?uid=R46050617&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
                         <a href="#" title="">
-                          Passive Income through Dividends 💵
+                        📊 Monitoring & Reviewing Risks
+
                           <span className="absolute inset-0" aria-hidden="true"></span>
                         </a>
                       </p>
@@ -71,12 +72,12 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-3.png"
+                        src="https://img.freepik.com/premium-photo/businessman-hold-low-poly-polygon-shield-with-tick-iconsecure-access-system-conceptbusiness-financial-warranty-investmentantivirus-concepttechnology-securityprotection-networksafe-data_150455-20840.jpg?uid=R46050617&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
                         <a href="#" title="">
-                          Inflation Beating Investment 🔥
+                        🌍 Protecting Reputation & Trust
                           <span className="absolute inset-0" aria-hidden="true"></span>
                         </a>
                       </p>
@@ -86,8 +87,8 @@ export default () => {
               </div>
 
               {/* Right Side - Image */}
-              <div className="self-end lg:col-span-5" data-aos="fade-left">
-                <img className="w-72 mx-auto h-92" src={hero} alt="" />
+              <div className="self-end lg:col-span-5">
+                <img className=" mx-auto " src={hero} alt="" />
               </div>
             </div>
           </div>

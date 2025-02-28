@@ -43,7 +43,7 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-1.png"
+                        src="https://img.freepik.com/premium-photo/green-outline-shield-shape-white_172429-58.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
@@ -63,7 +63,7 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-2.png"
+                        src="https://img.freepik.com/premium-vector/100-guarantee-sign-label-guaranteed-tags-vector-stock-illustration_100456-11341.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">
@@ -82,7 +82,7 @@ export default () => {
                     <div className="flex items-start lg:items-center">
                       <img
                         className="object-cover w-12 h-12 rounded-lg shrink-0"
-                        src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/1/thumbnail-3.png"
+                        src="https://img.freepik.com/premium-vector/vector-calendar-alarm-icon-white-background-vector-illustration_123447-1478.jpg?uid=R188284410&ga=GA1.1.475042653.1738300675&semt=ais_hybrid"
                         alt=""
                       />
                       <p className="ml-5 text-base font-bold leading-6 text-gray-900">

@@ -15,7 +15,8 @@ import Eq from "./components/investment/Equity/Eq";
 import { SignIn } from "./components/SignIn";
 import Footer from "./components/Footer";
 import Risk from"./components/investment/others/Risk";
-
+import Port from"./components/investment/portfolio/Port";
+import Claim from"./components/investment/claimadvisiory/Claim";
 import SignUp from "./components/SignUp";
 import PricingBox from "./components/PricingBox";
 import Services from "./components/Services";
@@ -50,6 +51,8 @@ function App() {
               <Route path="/Fixed" element={<Fixed />} />
               <Route path="/Eq" element={<Eq />} />
               <Route path="/Risk" element={<Risk />} />
+              <Route path="/Port" element={<Port />} />
+              <Route path="/Claim" element={<Claim />} />
               <Route path="/Services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />{" "}
               {/* Fix Contact Route */}

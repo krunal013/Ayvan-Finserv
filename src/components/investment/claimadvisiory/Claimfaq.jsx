@@ -1,42 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FiHome, FiLifeBuoy, FiGrid } from "react-icons/fi";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const faqData = {
   General: [
     {
-      question: "What are Equity?",
+      question: "What is Claim Advisory?",
       answer:
-        "Equity represents ownership in an asset after deducting liabilities. It gives you a stake in a business, property, or investment.",
+        "Claim Advisory is a service that helps individuals and businesses navigate the claim process, ensuring they receive fair and timely compensation.",
     },
     {
-      question: "How do Equity work?",
+      question: "Why is Claim Advisory important?",
       answer:
-        "Equity works by representing ownership in an asset (a company, real estate, or investment). It shows the value left after deducting liabilities and determines your stake in the asset.",
+        "Claim Advisory ensures that claims are properly documented, negotiated, and settled efficiently, reducing the chances of claim denials or underpayments.",
     },
     {
-      question: "What are the benefits of investing in Equity?",
+      question: "What types of claims can be handled?",
       answer:
-        "Investing in equity offers several benefits, primarily the potential for high returns compared to other asset classes. It helps in long-term wealth creation as stocks tend to grow in value over time.",
+        "Claim Advisory services can assist with insurance claims, legal claims, business loss claims, medical claims, and other financial recoveries.",
     },
   ],
   Support: [
     {
-      question: "How do I choose the right Equity?",
+      question: "How can a Claim Advisor help me?",
       answer:
-        "Choosing the right equity (stocks) requires careful research and a strategic approach. Start by analyzing the company's fundamentals, including revenue, profit margins, debt levels, and overall financial health.",
+        "A Claim Advisor provides expert guidance, handles negotiations, ensures compliance with documentation requirements, and maximizes your claim settlement.",
     },
     {
-      question: "Are Equity risky?",
+      question: "What documents are required for a claim?",
       answer:
-        "Yes, equity investments carry risks, as stock prices fluctuate due to market conditions, economic factors, and company performance.",
+        "Required documents vary depending on the claim type but may include identity proof, policy details, invoices, medical records, and supporting evidence.",
     },
   ],
   Others: [
     {
-      question: "What fees are associated with Equity?",
+      question: "How long does it take to settle a claim?",
       answer:
-        "Investing in equity involves several fees and charges that can impact your overall returns.",
+        "The claim settlement timeline depends on the complexity and type of claim. A Claim Advisor helps expedite the process by ensuring proper documentation and follow-ups.",
     },
   ],
 };
@@ -47,14 +49,21 @@ const tabIcons = {
   Others: <FiGrid className="inline-block mr-2" />,
 };
 
-export default function MutualFaq() {
+export default function ClaimAdvisoryFaq() {
   const [activeTab, setActiveTab] = useState("General");
   const [openIndex, setOpenIndex] = useState(null);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
     <div className="flex flex-col items-center">
       {/* Heading */}
-      <h2 className="text-4xl text-[#ff6b00] font-bold mb-6 text-center">
+      <h2
+        className="text-4xl text-[#ff6b00] font-bold mb-6 text-center"
+        data-aos="fade-up"
+      >
         Frequently Asked Questions
       </h2>
 
@@ -75,9 +84,15 @@ export default function MutualFaq() {
         ))}
       </div>
 
-      <div className="max-w-5xl w-full lg:h-[450px] p-6 text-black bg-white rounded-lg shadow-sm flex flex-col md:flex-row">
+      <div
+        className="max-w-5xl w-full lg:h-[450px] p-6 text-black bg-white rounded-lg shadow-sm flex flex-col md:flex-row"
+        data-aos="fade-up"
+      >
         {/* Sidebar Tabs */}
-        <div className="hidden md:flex md:w-1/4 pr-4 mb-4 md:mb-0 flex-col">
+        <div
+          className="hidden md:flex md:w-1/4 pr-4 mb-4 md:mb-0 flex-col"
+          data-aos="fade-left"
+        >
           <h2 className="text-lg font-semibold mb-4 text-center md:text-left">
             HOW TO GET STARTED
           </h2>

@@ -3,83 +3,69 @@ import { FiHome, FiLifeBuoy, FiGrid } from "react-icons/fi";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const faqData = {
-  General: [
+  "Investment Basics": [
     {
-      question: "What are Equity?",
+      question: "What is Portfolio Management?",
       answer:
-        "Equity represents ownership in an asset after deducting liabilities. It gives you a stake in a business, property, or investment.",
+        "Portfolio Management is the art and science of selecting and overseeing a group of investments that meet a client's long-term financial objectives and risk tolerance.",
     },
     {
-      question: "How do Equity work?",
+      question: "Why is Portfolio Diversification Important?",
       answer:
-        "Equity works by representing ownership in an asset (a company, real estate, or investment). It shows the value left after deducting liabilities and determines your stake in the asset.",
+        "Diversification helps reduce risk by spreading investments across various asset classes, industries, and geographies to minimize the impact of market fluctuations.",
     },
     {
-      question: "What are the benefits of investing in Equity?",
+      question: "How often should I review my portfolio?",
       answer:
-        "Investing in equity offers several benefits, primarily the potential for high returns compared to other asset classes. It helps in long-term wealth creation as stocks tend to grow in value over time.",
-    },
-  ],
-  Support: [
-    {
-      question: "How do I choose the right Equity?",
-      answer:
-        "Choosing the right equity (stocks) requires careful research and a strategic approach. Start by analyzing the company's fundamentals, including revenue, profit margins, debt levels, and overall financial health.",
-    },
-    {
-      question: "Are Equity risky?",
-      answer:
-        "Yes, equity investments carry risks, as stock prices fluctuate due to market conditions, economic factors, and company performance.",
+        "It is recommended to review your portfolio at least once a year or whenever there is a significant change in your financial situation or market conditions.",
     },
   ],
-  Others: [
+  "Investment Strategies": [
     {
-      question: "What fees are associated with Equity?",
+      question: "What are the different types of portfolio management?",
       answer:
-        "Investing in equity involves several fees and charges that can impact your overall returns.",
+        "Portfolio management can be classified into active, passive, discretionary, and non-discretionary management, each with different strategies and approaches.",
+    },
+    {
+      question: "What is Asset Allocation?",
+      answer:
+        "Asset allocation is the strategy of distributing investments among different asset classes like stocks, bonds, and real estate to optimize returns while managing risk.",
+    },
+  ],
+  "Performance & Fees": [
+    {
+      question: "How is portfolio performance measured?",
+      answer:
+        "Portfolio performance is typically measured using metrics like return on investment (ROI), Sharpe ratio, and benchmark comparisons.",
+    },
+    {
+      question: "Are there fees associated with portfolio management?",
+      answer:
+        "Yes, portfolio management services often charge fees, including management fees, performance fees, and transaction costs, which vary by service provider.",
     },
   ],
 };
 
 const tabIcons = {
-  General: <FiHome className="inline-block mr-2" />,
-  Support: <FiLifeBuoy className="inline-block mr-2" />,
-  Others: <FiGrid className="inline-block mr-2" />,
+  "Investment Basics": <FiHome className="inline-block mr-2" />, 
+  "Investment Strategies": <FiLifeBuoy className="inline-block mr-2" />, 
+  "Performance & Fees": <FiGrid className="inline-block mr-2" />, 
 };
 
-export default function MutualFaq() {
-  const [activeTab, setActiveTab] = useState("General");
+export default function PortfolioFaq() {
+  const [activeTab, setActiveTab] = useState("Investment Basics");
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <div className="flex flex-col items-center">
-      {/* Heading */}
       <h2 className="text-4xl text-[#ff6b00] font-bold mb-6 text-center">
-        Frequently Asked Questions
+      Frequently Asked Questions
       </h2>
-
-      {/* Mobile Tabs */}
-      <div className="flex md:hidden justify-center space-x-3 mb-4">
-        {Object.keys(faqData).map((tab) => (
-          <button
-            key={tab}
-            className={`flex items-center py-2 px-4 rounded-lg transition ${
-              activeTab === tab
-                ? "bg-orange-100 text-orange-600 font-semibold"
-                : "text-gray-600"
-            }`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tabIcons[tab]} {tab}
-          </button>
-        ))}
-      </div>
-
       <div className="max-w-5xl w-full lg:h-[450px] p-6 text-black bg-white rounded-lg shadow-sm flex flex-col md:flex-row">
         {/* Sidebar Tabs */}
-        <div className="hidden md:flex md:w-1/4 pr-4 mb-4 md:mb-0 flex-col">
+        <div className="md:w-1/4 pr-4 mb-4 md:mb-0">
           <h2 className="text-lg font-semibold mb-4 text-center md:text-left">
-            HOW TO GET STARTED
+            INVESTMENT GUIDE
           </h2>
           <div className="flex flex-col space-y-3">
             {Object.keys(faqData).map((tab) => (
@@ -98,7 +84,7 @@ export default function MutualFaq() {
           </div>
         </div>
 
-        {/* FAQ Section */}
+        {/* FAQ Section with hidden scrollbar */}
         <div className="md:w-3/4 pl-0 md:pl-6 overflow-auto hide-scrollbar">
           <div>
             {faqData[activeTab].map((item, index) => (
@@ -120,6 +106,7 @@ export default function MutualFaq() {
                     )}
                   </span>
                 </button>
+                {/* Smooth transition container */}
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
                     openIndex === index ? "max-h-40 mt-2" : "max-h-0"
