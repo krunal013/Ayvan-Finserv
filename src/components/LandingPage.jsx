@@ -6,6 +6,7 @@ import ContactBanner from "./ContactBanner";
 import FinancialServices from "./FinancialServices";
 import States from "./States";
 import List from './List'
+import SIPCalculatorHome from "./SIPCalculatorHome";
 
 const LandingPage = () => {
   return (
@@ -24,6 +25,8 @@ const LandingPage = () => {
 
       {/* <FinancialCards/> */}
       <FinancialServices />
+      <SIPCalculatorHome/>
+     
       <States />
       <List/>
     </div>

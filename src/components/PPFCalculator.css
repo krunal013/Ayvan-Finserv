@@ -1,5 +1,5 @@
 /* You can copy the content of Sipcalculator.css and modify it as needed */
-.emi-calculator-wrapper {
+.ppf-calculator-wrapper {
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
@@ -9,28 +9,37 @@
     font-family: 'Arial', sans-serif;
   }
   
-  .emi-calculator-wrapper h2 {
+  .ppf-calculator-wrapper h2 {
     text-align: center;
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
   }
   
-  .emi-calculator-wrapper input[type="range"] {
+  .ppf-calculator-wrapper input[type="range"],
+  .ppf-calculator-wrapper input[type="number"] {
     width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
   }
   
-  .emi-calculator-wrapper label {
+  .ppf-calculator-wrapper label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
   }
   
-  .emi-calculator-wrapper button {
+  .ppf-calculator-wrapper button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #17a2b8;
     color: white;
     border: none;
     border-radius: 5px;
@@ -39,26 +48,25 @@
     transition: background-color 0.3s ease;
   }
   
-  .emi-calculator-wrapper button:hover {
-    background-color: #0056b3;
+  .ppf-calculator-wrapper button:hover {
+    background-color: #138496;
   }
   
-  .emi-calculator-wrapper .results {
+  .ppf-calculator-wrapper .results {
     margin-top: 20px;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #f0f8ff;
+    background-color: #e0f7fa;
     color: #333;
   }
   
-  .emi-calculator-wrapper .results h3 {
+  .ppf-calculator-wrapper .results h3 {
     font-size: 20px;
     margin-bottom: 10px;
     text-align: center;
   }
   
-  .emi-calculator-wrapper .results p {
+  .ppf-calculator-wrapper .results p {
     margin-bottom: 5px;
   }
-  

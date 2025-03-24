@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import GeneralBanner from "./GeneralBanner";
@@ -9,12 +9,29 @@ import State from "./States";
 import CTA from "./CTA";
 import Plans from "./Plans";
 import CoveredAndNotCovered from "./CoveredAndNotCovered";
-import List from './List'
+import List from './List';
 
 const GeneralInsurance = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
-  }, []);
+  },);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  },);
+
+  useEffect(() => {
+    window.scrollTo(0, scrollPosition);
+  }, [scrollPosition]);
 
   return (
     <>
