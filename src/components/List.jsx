@@ -1,9 +1,10 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules"; // Removed Navigation
+import { Autoplay } from "swiper/modules"; // Removed Pagination
 import "swiper/css";
-import "swiper/css/pagination"; // Removed navigation CSS
+// import "swiper/css/pagination"; // Removed pagination CSS
+// import "swiper/css/navigation"; // Removed navigation CSS
 
 const WhatMakesUsDifferent = () => {
   return (
@@ -50,11 +51,14 @@ const WhatMakesUsDifferent = () => {
             </h2>
             <Swiper
               className="mySwiper"
-              modules={[Pagination]} // Removed Navigation
+              modules={[Autoplay]} // Removed Pagination from modules
               slidesPerView={2}
               spaceBetween={28}
               loop={true}
-              pagination={{ clickable: true }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
               breakpoints={{
                 0: { slidesPerView: 1, spaceBetween: 20 },
                 768: { slidesPerView: 2, spaceBetween: 28 },

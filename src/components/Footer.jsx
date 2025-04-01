@@ -46,7 +46,7 @@ export const Footer = () => {
             </div>
 
             {/* Footer Content Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
               {/* Company Info */}
               <div className="col-span-2 sm:col-span-1 mx-auto text-center">
                 <h3 className="text-xl font-semibold">

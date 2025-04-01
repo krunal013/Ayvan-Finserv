@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lifebanner from "./Lifebanner";
@@ -9,13 +9,30 @@ import CTA from "./CTA";
 import Plans from "./Plans";
 import HealthBanner from "./Healthbanner";
 import pngegg from "../public/images/pngegg.png";
-import CoverNotHealth from "./CoverNotHealth"
-import List from './List'
+import CoverNotHealth from "./CoverNotHealth";
+import List from './List';
 
 const GeneralInsurance = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: false }); // Initialize AOS
-  }, []);
+  },);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  },);
+
+  useEffect(() => {
+    window.scrollTo(0, scrollPosition);
+  }, [scrollPosition]);
 
   return (
     <>
@@ -26,7 +43,7 @@ const GeneralInsurance = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           {/* Left Side Content */}
           <div className="lg:w-1/2" data-aos="fade-left">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4"  data-aos="fade-up">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4"   data-aos="fade-up">
               What is Health Insurance?
             </h2>
             <p className="text-gray-600 mb-6" data-aos="fade-up" data-aos-delay="200">
@@ -75,7 +92,7 @@ const GeneralInsurance = () => {
       <Wedoitlife />
       <Typesofhealth />
       <Plans />
-      <CoverNotHealth/>
+      <CoverNotHealth />
       <State />
       {/* <List/> */}
     </>

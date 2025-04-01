@@ -25,6 +25,15 @@ import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import WelcomePage from "./components/WelcomePage";
 import WealthManagement from "./components/WealthManagement";
+import Calculators from "./components/Calculators";
+import SIPCalculator from "./components/SIPCalculator";
+import EMICalculator from './components/EMICalculator';
+import FDCalculator from './components/FDCalculator';
+import LumpsumCalculator from './components/LumpsumCalculator';
+import EPFCalculator from './components/EPFCalculator';
+import PPFCalculator from './components/PPFCalculator';
+import SWPCalculator from './components/SWPCalculator';
+
 
 function App() {
   const appStyle = {
@@ -53,6 +62,14 @@ function App() {
               <Route path="/Risk" element={<Risk />} />
               <Route path="/Port" element={<Port />} />
               <Route path="/Claim" element={<Claim />} />
+              <Route path="/Calculators" element={<Calculators />} />
+              <Route path="/SIPCalculator" element={<SIPCalculator />} />
+              <Route path="/emi-calculator" element={<EMICalculator />} />
+              <Route path="/fd-calculator" element={<FDCalculator />} />
+              <Route path="/lumpsum-calculator" element={<LumpsumCalculator />} />
+              <Route path="/epf-calculator" element={<EPFCalculator />} />
+              <Route path="/ppf-calculator" element={<PPFCalculator />} />
+              <Route path="/swp-calculator" element={<SWPCalculator />} />
               <Route path="/Services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />{" "}
               {/* Fix Contact Route */}

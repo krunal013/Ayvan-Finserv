@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import "react-horizontal-scrolling-menu/dist/styles.css";
+import Form from "../components/Form";
 
 const hidescrollbar = {
   /* For Webkit browsers */
@@ -64,18 +65,6 @@ const termPlans = [
     ],
     button2: "Learn More",
   },
-  {
-    title: "Ayvan Finserv SecureGuard",
-    subtitle: "Robust term insurance for dependable future planning.",
-    badge: "Term Plans",
-    features: [
-      "High coverage with low premium",
-      "Quick and hassle-free issuance",
-      "Online discount available",
-      "Multiple plan options",
-    ],
-    button2: "Learn More",
-  },
 ];
 
 const savingsPlans = [
@@ -89,18 +78,6 @@ const savingsPlans = [
       "Flexible deposit options",
       "Guaranteed returns",
       "No hidden charges",
-    ],
-    button2: "Learn More",
-  },
-  {
-    title: "Ayvan Finserv WealthGrow",
-    subtitle: "A plan focused on growing your wealth steadily over time.",
-    badge: "Savings Plans",
-    features: [
-      "Regular contributions",
-      "Attractive bonuses",
-      "Long-term growth potential",
-      "Tax-saving benefits",
     ],
     button2: "Learn More",
   },
@@ -120,41 +97,46 @@ const retirementPlans = [
     ],
     button2: "Learn More",
   },
-  {
-    title: "Ayvan Finserv SecureRetire",
-    subtitle:
-      "A retirement plan that ensures you live your golden years comfortably.",
-    badge: "Retirement Plans",
-    features: [
-      "Customized retirement solutions",
-      "High payout ratios",
-      "Low management fees",
-      "Comprehensive support",
-    ],
-    button2: "Learn More",
-  },
 ];
 
 const Plans = () => {
-  // Active tab state (Recommended, Term, Savings, Retirement)
   const [activeTab, setActiveTab] = useState("Recommended");
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleTabClick = (tab) => setActiveTab(tab);
+
+  const handleSelectPlan = (plan) => {
+    setSelectedPlan(plan);
+    setTimeout(() => setIsVisible(true), 10); // Delay to trigger animation smoothly
+  };
+
+  const handleCloseSidebar = () => {
+    setIsVisible(false);
+    setTimeout(() => setSelectedPlan(null), 500); // Wait for animation to finish before unmounting
   };
 
   // Helper function to render cards for a given plan array
   const renderCards = (plansArray) => (
-    <div className="w-full overflow-x-auto no-scrollbar" style={hidescrollbar}>
+    <div className="w-full overflow-x-auto no-scrollbar">
       <ScrollMenu>
         {plansArray.map((plan, index) => (
           <div
             key={index}
-            className="w-[320px] min-w-[320px] border border-[#00000025] bg-white shadow-md rounded-lg p-4 mx-2 my-4 flex flex-col justify-between h-[380px]"
+            className="w-[320px] min-w-[320px] border border-[#00000025] bg-white shadow-md rounded-lg p-4 mx-2 my-4 flex flex-col justify-between h-[400px]"
           >
             <div>
               <div className="pb-3 border-b border-dashed">
-                <span className="text-xs  border border-dashed text-white p-1 rounded-md bg-[#ff6b00] font-semibold">
+                <span className="text-xs border border-dashed text-white p-1 rounded-md bg-[#ff6b00] font-semibold">
                   {plan.badge}
                 </span>
                 <h3 className="text-lg text-[#252525] font-bold mt-2">
@@ -172,11 +154,13 @@ const Plans = () => {
                 ))}
               </ul>
             </div>
-            {/* Button at the bottom */}
             <div className="mt-4">
               {plan.button2 && (
-                <button className="w-full border border-orange-500 text-orange-500 py-2 px-4 rounded">
-                  {plan.button2}
+                <button
+                  className="mt-4 w-full border border-orange-500 text-orange-500 py-2 px-4 rounded hover:bg-orange-500 hover:text-white"
+                  onClick={() => handleSelectPlan(plan)}
+                >
+                  Learn More
                 </button>
               )}
             </div>
@@ -189,98 +173,126 @@ const Plans = () => {
   return (
     <>
       <div className="pt-10 text-center bg-gray-50">
-        <div className="inline-block tracking-wider bg-[#ff6b00] text-white text-xs font-bold px-2 py-1 rounded-md mb-4">
-          MOST PREFERRED
-        </div>
         <h2 className="text-4xl font-bold text-gray-900">Our Plans</h2>
       </div>
-      <div className="min-h-screen flex justify-center items-center  bg-gray-50">
+      <div className="min-h-screen flex justify-center items-center bg-gray-50">
         <div className="w-full max-w-6xl">
-          {/* Tabs */}
-          <div className="relative">
-            {/* Sticky Tabs under Header */}
-            <div className="sticky top-[80px] z-20 bg-gray-50 py-3">
-              <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
-                <ul className="flex w-max mx-auto space-x-4 px-4">
-                  {[
-                    { key: "Recommended", label: "Recommended" },
-                    { key: "Term", label: "Term Insurance" },
-                    { key: "Savings", label: "Savings Plans" },
-                    { key: "Retirement", label: "Retirement Plans" },
-                  ].map((tab) => (
-                    <li
-                      key={tab.key}
-                      className={`tab text-[15px] min-w-[160px] text-center py-2.5 px-5 border-b-2 cursor-pointer 
-            ${
-              activeTab === tab.key
-                ? "text-orange-600 font-bold border-orange-600"
-                : "text-gray-600 font-semibold border-transparent"
-            }
-          `}
-                      onClick={() => handleTabClick(tab.key)}
-                    >
-                      {tab.label}
+          <div className="sticky top-[80px] z-20 bg-gray-50 py-3">
+            <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
+              <ul className="flex w-max mx-auto space-x-4 px-4">
+                {["Recommended", "Term", "Savings", "Retirement"].map((tab) => (
+                  <li
+                    key={tab}
+                    className={`tab text-[15px] min-w-[160px] text-center py-2.5 px-5 border-b-2 cursor-pointer ${
+                      activeTab === tab
+                        ? "text-orange-600 font-bold border-orange-600"
+                        : "text-gray-600 font-semibold border-transparent"
+                    }`}
+                    onClick={() => handleTabClick(tab)}
+                  >
+                    {tab}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {activeTab === "Recommended" && renderCards(Recommended)}
+          {activeTab === "Term" && renderCards(termPlans)}
+          {activeTab === "Savings" && renderCards(savingsPlans)}
+          {activeTab === "Retirement" && renderCards(retirementPlans)}
+        </div>
+      </div>
+
+      {!isMobile && selectedPlan && (
+        <>
+          {/* Overlay to prevent scrolling (Only when sidebar is open) */}
+          {selectedPlan && (
+            <div
+              className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+              onClick={handleCloseSidebar} // Clicking outside closes sidebar
+            />
+          )}
+
+          {/* Sidebar (Always in DOM, uses translate-x for smooth transitions) */}
+          <div
+            className={`fixed top-[82px] right-0 h-[calc(100vh-82px)] w-[500px] bg-gray-50 shadow-lg z-50 p-6 overflow-y-auto transform transition-all duration-500 ease-in-out ${
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "translate-x-full opacity-0"
+            }`}
+            style={{ visibility: selectedPlan ? "visible" : "hidden" }} // Hides only after animation completes
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-600 text-xl"
+              onClick={handleCloseSidebar}
+            >
+              ✖
+            </button>
+            {selectedPlan && (
+              <>
+                <h2 className="text-2xl text-black font-bold">
+                  {selectedPlan.title}
+                </h2>
+                <p className="text-gray-600 mt-2">{selectedPlan.subtitle}</p>
+                <ul className="mt-4 mb-0 text-black space-y-2">
+                  {selectedPlan.features.map((feature, i) => (
+                    <li key={i} className="text-sm flex items-center gap-2">
+                      ✅ {feature}
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-
-            {/* Tab Content */}
-            {activeTab === "Recommended" && (
-              <div className="tab-content mt-8 text-center">
-                <h4 className="text-2xl font-bold text-[#232323] mb-4">
-                  Ayvan Finserv Recommended Plans
-                </h4>
-                <p className="text-sm text-gray-600 mb-8 max-w-2xl mx-auto">
-                  Choose from our handpicked plans that cater to your unique
-                  financial and protection needs.
-                </p>
-                {renderCards(Recommended)}
-              </div>
-            )}
-
-            {activeTab === "Term" && (
-              <div className="tab-content mt-8 text-center">
-                <h4 className="text-2xl font-bold text-[#232323] mb-4">
-                  Ayvan Finserv Term Insurance Plans
-                </h4>
-                <p className="text-sm text-gray-600 mb-8 max-w-2xl mx-auto">
-                  Our term insurance plans provide protection and peace of mind
-                  for you and your family.
-                </p>
-                {renderCards(termPlans)}
-              </div>
-            )}
-
-            {activeTab === "Savings" && (
-              <div className="tab-content mt-8 text-center">
-                <h4 className="text-2xl font-bold text-[#232323] mb-4">
-                  Ayvan Finserv Savings Plans
-                </h4>
-                <p className="text-sm text-gray-600 mb-8 max-w-2xl mx-auto">
-                  Build a secure future with our specially curated savings plans
-                  tailored to your financial goals.
-                </p>
-                {renderCards(savingsPlans)}
-              </div>
-            )}
-
-            {activeTab === "Retirement" && (
-              <div className="tab-content mt-8 text-center">
-                <h4 className="text-2xl font-bold text-[#232323] mb-4">
-                  Ayvan Finserv Retirement Plans
-                </h4>
-                <p className="text-sm text-gray-600 mb-8 max-w-2xl mx-auto">
-                  Secure your golden years with plans that offer financial
-                  stability and a comfortable retirement.
-                </p>
-                {renderCards(retirementPlans)}
-              </div>
+                <Form />
+              </>
             )}
           </div>
-        </div>
-      </div>
+
+          {/* Disable body scrolling when sidebar is open */}
+          {selectedPlan && (
+            <style>
+              {`
+          body {
+            overflow: hidden;
+          }
+        `}
+            </style>
+          )}
+        </>
+      )}
+
+      {/* Modal for Mobile */}
+      {isMobile && selectedPlan && (
+        <>
+          <div className="fixed inset-0 bg-black text-black bg-opacity-50 z-50 flex items-center justify-center transition-opacity duration-300">
+            <div className="bg-white rounded-lg w-[90%] max-w-md p-6 shadow-lg relative  overflow-y-auto max-h-[80vh]">
+              <button
+                className="absolute top-4 right-4 text-gray-600 text-xl"
+                onClick={handleCloseSidebar}
+              >
+                ✖
+              </button>
+              <h2 className="text-xl lg:text-2xl font-bold">
+                {selectedPlan.title}
+              </h2>
+              <p className="text-gray-600 text-sm mt-2">
+                {selectedPlan.subtitle}
+              </p>
+              <ul className="mt-4 mb-4 text-sm space-y-2">
+                {selectedPlan.features.map((feature, i) => (
+                  <li key={i} className="text-sm flex items-center gap-2">
+                    ✅ {feature}
+                  </li>
+                ))}
+              </ul>
+              <div className="">
+                <Form />
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };
